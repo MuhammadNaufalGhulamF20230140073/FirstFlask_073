@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Nilai Siswa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Daftar Nilai Siswa</h1>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Matematika</th>
+                <th>Fisika</th>
+                <th>Kimia</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for siswa in data_siswa %}
+            <tr>
+                <td>{{ siswa.nama }}</td>
+                <td>{{ siswa.matematika }}</td>
+                <td>{{ siswa.fisika }}</td>
+                <td>{{ siswa.kimia }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/">Kembali ke Form</a>
+</body>
+</html>

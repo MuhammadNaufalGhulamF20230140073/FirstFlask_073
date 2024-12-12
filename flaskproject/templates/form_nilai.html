@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nilai Siswa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Form Nilai Siswa</h1>
+    <form action="/submit" method="POST" class="form-container">
+        <div class="form-group">
+            <label for="nama">Nama Siswa:</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+        <div class="form-group">
+            <label for="matematika">Nilai Matematika:</label>
+            <input type="number" id="matematika" name="matematika" required>
+        </div>
+        <div class="form-group">
+            <label for="fisika">Nilai Fisika:</label>
+            <input type="number" id="fisika" name="fisika" required>
+        </div>
+        <div class="form-group">
+            <label for="kimia">Nilai Kimia:</label>
+            <input type="number" id="kimia" name="kimia" required>
+        </div>
+        <button type="submit">Simpan</button>
+    </form>
+    <br>
+    <a href="/daftar">Lihat Daftar Nilai</a>
+</body>
+</html>
